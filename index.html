@@ -18,17 +18,17 @@
   --text:        #1a2a3a;
   --text-mid:    #3a5268;
   --muted:       #7a9ab8;
-
+ 
   /* Blue accent */
   --blue:        #2e82d4;
   --blue-light:  #eaf3fc;
   --blue-glow:   rgba(46,130,212,.15);
-
+ 
   /* Pink/coral highlight */
   --pink:        #e8426e;
   --pink-light:  #fde8ef;
   --pink-glow:   rgba(232,66,110,.12);
-
+ 
   /* Status */
   --green:       #1daa6f;
   --green-bg:    #e8f8f2;
@@ -39,7 +39,7 @@
   --red:         #c0293a;
   --red-bg:      #fdeaec;
   --red-bdr:     #f0a8b0;
-
+ 
   --radius:      16px;
   --radius-sm:   10px;
   --mono:        'IBM Plex Mono', monospace;
@@ -47,9 +47,9 @@
   --shadow:      0 2px 12px rgba(30,80,140,.08);
   --shadow-md:   0 4px 24px rgba(30,80,140,.12);
 }
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 body {
   font-family: var(--sans);
   background: var(--bg);
@@ -58,7 +58,7 @@ body {
   min-height: 100dvh;
   -webkit-text-size-adjust: 100%;
 }
-
+ 
 /* ── Top bar ── */
 .topbar {
   display: flex;
@@ -91,7 +91,7 @@ body {
   border-radius: 4px;
   letter-spacing: .08em;
 }
-
+ 
 /* ── Page layout ── */
 .page {
   max-width: 600px;
@@ -101,7 +101,7 @@ body {
   flex-direction: column;
   gap: 14px;
 }
-
+ 
 /* ── Cards ── */
 .card {
   background: var(--card);
@@ -132,7 +132,7 @@ body {
   flex-direction: column;
   gap: 14px;
 }
-
+ 
 /* ── Form rows ── */
 .row-2 {
   display: grid;
@@ -140,7 +140,7 @@ body {
   gap: 10px;
 }
 .field { display: flex; flex-direction: column; gap: 5px; }
-
+ 
 label {
   font-size: 11px;
   font-family: var(--mono);
@@ -149,7 +149,7 @@ label {
   text-transform: uppercase;
   color: var(--muted);
 }
-
+ 
 /* ── Inputs ── */
 input[type="text"],
 input[type="date"] {
@@ -182,7 +182,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: .5;
   cursor: pointer;
 }
-
+ 
 /* ── Cabin grid ── */
 .cabin-row {
   display: grid;
@@ -203,7 +203,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .cabin-cell input { padding-right: 30px; }
 .cabin-cell.hidden { display: none; }
-
+ 
 /* ── Toggle (W cabin) ── */
 .toggle-row {
   display: flex;
@@ -241,7 +241,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .toggle-switch input:checked + .toggle-slider { background: var(--blue); }
 .toggle-switch input:checked + .toggle-slider:before { transform: translateX(18px); }
 .toggle-label { font-size: 14px; color: var(--text-mid); font-weight: 500; }
-
+ 
 /* ── Route status ── */
 .route-status {
   padding: 12px 14px;
@@ -280,7 +280,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .route-option input[type=radio] { accent-color: var(--blue); width: 16px; height: 16px; flex-shrink: 0; }
 .route-option .rcode { font-family: var(--mono); font-weight: 600; font-size: 14px; color: var(--text); }
 .route-option .robs { font-size: 11px; color: var(--muted); margin-top: 1px; font-family: var(--mono); }
-
+ 
 /* ── Output area ── */
 .format-tabs { display: flex; gap: 4px; }
 .fmt-btn {
@@ -303,7 +303,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
   border-color: var(--blue);
 }
-
+ 
 textarea {
   width: 100%;
   min-height: 160px;
@@ -325,7 +325,7 @@ textarea:focus {
   box-shadow: 0 0 0 3px var(--blue-glow);
   background: white;
 }
-
+ 
 /* Example box */
 .example-box {
   padding: 12px 14px;
@@ -350,7 +350,7 @@ textarea:focus {
   line-height: 1.75;
   white-space: pre;
 }
-
+ 
 /* ── Sticky bottom actions ── */
 .sticky-actions {
   position: fixed;
@@ -385,7 +385,7 @@ textarea:focus {
   touch-action: manipulation;
 }
 .btn-generate:active { transform: scale(.97); }
-
+ 
 .btn-copy {
   appearance: none;
   border: 2px solid var(--blue);
@@ -403,7 +403,7 @@ textarea:focus {
   white-space: nowrap;
 }
 .btn-copy:active { transform: scale(.97); background: var(--blue-light); }
-
+ 
 .btn-clear {
   appearance: none;
   border: 2px solid var(--border-mid);
@@ -420,7 +420,7 @@ textarea:focus {
   touch-action: manipulation;
 }
 .btn-clear:active { transform: scale(.97); }
-
+ 
 /* ── Desktop adjustments ── */
 @media (min-width: 640px) {
   .page { padding: 24px 20px 120px; }
@@ -429,23 +429,23 @@ textarea:focus {
 </style>
 </head>
 <body>
-
+ 
 <div class="topbar">
   <div class="topbar-logo">
     CI Loading
     <span class="topbar-badge">TOOL</span>
   </div>
 </div>
-
+ 
 <div class="page">
-
+ 
   <!-- 輸入卡 -->
   <div class="card">
     <div class="card-header">
       <div class="card-title">輸入資料</div>
     </div>
     <div class="card-body">
-
+ 
       <div class="row-2">
         <div class="field">
           <label for="flightDate">日期</label>
@@ -457,7 +457,7 @@ textarea:focus {
                  placeholder="503" autocomplete="off" spellcheck="false" />
         </div>
       </div>
-
+ 
       <div class="row-2">
         <div class="field">
           <label for="dep">出發站</label>
@@ -470,7 +470,7 @@ textarea:focus {
                  autocapitalize="characters" placeholder="NRT" />
         </div>
       </div>
-
+ 
       <div class="field">
         <div class="toggle-row">
           <label class="toggle-switch">
@@ -480,7 +480,7 @@ textarea:focus {
           <span class="toggle-label">含豪華經濟艙（W 艙）</span>
         </div>
       </div>
-
+ 
       <div class="field">
         <label>空位（Availability）</label>
         <div class="cabin-row">
@@ -498,7 +498,7 @@ textarea:focus {
           </div>
         </div>
       </div>
-
+ 
       <div class="field">
         <label>候補人數（Waitlist）</label>
         <div class="cabin-row">
@@ -516,16 +516,15 @@ textarea:focus {
           </div>
         </div>
       </div>
-
+ 
       <div id="routeStatus" class="route-status">
-        <div class="rs-label">航段狀態</div>
         <span id="routeText">尚未輸入航班號。</span>
         <div id="routeOptions" class="route-options"></div>
       </div>
-
+ 
     </div>
   </div>
-
+ 
   <!-- 輸出卡 -->
   <div class="card">
     <div class="card-header">
@@ -537,15 +536,12 @@ textarea:focus {
     </div>
     <div class="card-body">
       <textarea id="output" placeholder="按下「產生訊息」後，這裡會出現結果。&#10;可直接複製貼給對方。"></textarea>
-      <div class="example-box">
-        <div class="example-title">格式範例</div>
-        <div id="exampleText" class="example-text"></div>
-      </div>
+<div id="exampleText" style="display:none"></div>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <div id="dbStat" style="display:none"></div>
 <!-- 固定底部按鈕 -->
 <div class="sticky-actions">
@@ -553,7 +549,7 @@ textarea:focus {
   <button class="btn-copy" id="copyBtn">複製</button>
   <button class="btn-clear" id="clearBtn">清空</button>
 </div>
-
+ 
 <script>
 const CI_FLIGHT_MASTER = {
   "CI0003": {
@@ -6066,8 +6062,183 @@ const CI_FLIGHT_MASTER = {
       }
     ]
   }
+  ,
+  "CI0181": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "DEL", "route": "TPE-DEL", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Kolkata", "observations": 1}]
+  },
+  "CI0182": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "DEL", "arr": "TPE", "route": "DEL-TPE", "dep_tz": "Asia/Kolkata", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0026": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "GUM", "route": "TPE-GUM", "dep_tz": "Asia/Taipei", "arr_tz": "Pacific/Guam", "observations": 1}]
+  },
+  "CI0025": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "GUM", "arr": "TPE", "route": "GUM-TPE", "dep_tz": "Pacific/Guam", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0002": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "HNL", "route": "TPE-HNL", "dep_tz": "Asia/Taipei", "arr_tz": "Pacific/Honolulu", "observations": 1}]
+  },
+  "CI0001": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "HNL", "arr": "TPE", "route": "HNL-TPE", "dep_tz": "Pacific/Honolulu", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0563": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "URC", "route": "TPE-URC", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Urumqi", "observations": 1}]
+  },
+  "CI0564": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "URC", "arr": "TPE", "route": "URC-TPE", "dep_tz": "Asia/Urumqi", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0565": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "HFE", "route": "TPE-HFE", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0566": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "HFE", "arr": "TPE", "route": "HFE-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0547": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "YNT", "route": "TPE-YNT", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0548": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "YNT", "arr": "TPE", "route": "YNT-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0535": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "DLC", "route": "TPE-DLC", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0536": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "DLC", "arr": "TPE", "route": "DLC-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0523": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "HAK", "route": "TPE-HAK", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0524": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "HAK", "arr": "TPE", "route": "HAK-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0545": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "KHN", "route": "TPE-KHN", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0546": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "KHN", "arr": "TPE", "route": "KHN-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0251": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "RMQ", "arr": "CKG", "route": "RMQ-CKG", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0252": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "CKG", "arr": "RMQ", "route": "CKG-RMQ", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0253": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "RMQ", "arr": "KHN", "route": "RMQ-KHN", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0254": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "KHN", "arr": "RMQ", "route": "KHN-RMQ", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0531": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "TAO", "route": "TPE-TAO", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Shanghai", "observations": 1}]
+  },
+  "CI0532": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TAO", "arr": "TPE", "route": "TAO-TPE", "dep_tz": "Asia/Shanghai", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0707": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "KAL", "route": "TPE-KAL", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Pontianak", "observations": 1}]
+  },
+  "CI0708": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "KAL", "arr": "TPE", "route": "KAL-TPE", "dep_tz": "Asia/Pontianak", "arr_tz": "Asia/Taipei", "observations": 1}]
+  },
+  "CI0645": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "TPE", "arr": "HKT", "route": "TPE-HKT", "dep_tz": "Asia/Taipei", "arr_tz": "Asia/Bangkok", "observations": 1}]
+  },
+  "CI0646": {
+    "auto_fill_safe": true,
+    "route_count": 1,
+    "routes": [{"dep": "HKT", "arr": "TPE", "route": "HKT-TPE", "dep_tz": "Asia/Bangkok", "arr_tz": "Asia/Taipei", "observations": 1}]
+  }
 };
-
+ 
+const CITY_ZH = {
+  "TPE":"台北桃園","TSA":"台北松山","KHH":"高雄","RMQ":"台中",
+  "NRT":"東京成田","HND":"東京羽田","KIX":"大阪","NGO":"名古屋",
+  "FUK":"福岡","OKA":"沖繩","CTS":"札幌","HIJ":"廣島","KOJ":"鹿兒島",
+  "KMJ":"熊本","TAK":"高松","ISG":"石垣","TOY":"富山","KMI":"宮崎",
+  "ICN":"首爾仁川","GMP":"首爾金浦","PUS":"釜山",
+  "PVG":"上海浦東","SHA":"上海虹橋","PEK":"北京","CAN":"廣州",
+  "SZX":"深圳","HKG":"香港","MFM":"澳門",
+  "TFU":"成都","CKG":"重慶","XMN":"廈門","HAK":"海口",
+  "KHN":"南昌","HFE":"合肥","YNT":"煙台","DLC":"大連",
+  "TAO":"青島","URC":"烏魯木齊","TSA":"台北松山",
+  "NRT":"東京成田","SFO":"舊金山","LAX":"洛杉磯","JFK":"紐約",
+  "ORD":"芝加哥","SEA":"西雅圖","YVR":"溫哥華","YYZ":"多倫多",
+  "ONT":"安大略","PHX":"鳳凰城","DFW":"達拉斯","MIA":"邁阿密",
+  "ATL":"亞特蘭大","ANC":"安克拉治","HNL":"檀香山",
+  "LHR":"倫敦","FRA":"法蘭克福","AMS":"阿姆斯特丹",
+  "VIE":"維也納","FCO":"羅馬","PRG":"布拉格",
+  "SYD":"雪梨","MEL":"墨爾本","BNE":"布里斯本","AKL":"奧克蘭",
+  "MNL":"馬尼拉","CEB":"宿霧","KUL":"吉隆坡","PEN":"檳城",
+  "SIN":"新加坡","CGK":"雅加達","DPS":"峇里島",
+  "BKK":"曼谷","CNX":"清邁","HKT":"普吉島","DAD":"峴港",
+  "SGN":"胡志明市","HAN":"河內","RGN":"仰光",
+  "DEL":"新德里","BOM":"孟買","GUM":"關島","ROR":"帛琉",
+  "KAL":"加里曼丹","HKT":"普吉島","KTI":"格蘭坦",
+  "DWC":"杜拜","LUX":"盧森堡","DFW":"達拉斯",
+  "LUX":"盧森堡","ANC":"安克拉治"
+};
+ 
+function cityLabel(iata) {
+  if (!iata) return '';
+  const zh = CITY_ZH[iata.toUpperCase()];
+  return zh ? iata + zh : iata;
+}
+ 
 // ── DOM ──
 const el = {
   date: document.getElementById('flightDate'),
@@ -6092,9 +6263,9 @@ const el = {
   fmtStd: document.getElementById('fmtStd'),
   fmtCpt: document.getElementById('fmtCpt'),
 };
-
+ 
 let currentFormat = 'standard';
-
+ 
 // ── Init ──
 function setToday() {
   const d = new Date();
@@ -6104,10 +6275,10 @@ setToday();
 renderPremium();
 updateRoute();
 renderExample();
-
+ 
 const total = Object.keys(CI_FLIGHT_MASTER).length;
-
-
+ 
+ 
 // ── Utilities ──
 function normFlight(v) {
   const raw = String(v||'').toUpperCase().replace(/\s+/g,'');
@@ -6137,7 +6308,7 @@ function fmtDate(v, compact) {
   const [y,m,d] = v.split('-');
   return compact ? `${m}/${d}` : `${y}/${m}/${d}`;
 }
-
+ 
 // ── Premium toggle ──
 function renderPremium() {
   const show = el.premium.checked;
@@ -6145,7 +6316,7 @@ function renderPremium() {
   el.waitWCell.classList.toggle('hidden', !show);
 }
 el.premium.addEventListener('change', () => { renderPremium(); autoGenerate(); });
-
+ 
 // ── Route logic ──
 function updateRoute(normalizeField) {
   const norm = normFlight(el.no.value);
@@ -6154,22 +6325,22 @@ function updateRoute(normalizeField) {
     el.no.value = norm;
   }
   el.routeOptions.innerHTML = '';
-
+ 
   const box = el.routeStatus;
   box.className = 'route-status';
-
+ 
   if (!norm) {
     el.routeText.textContent = '尚未輸入航班號。';
     return;
   }
-
+ 
   const info = CI_FLIGHT_MASTER[normFlightKey(el.no.value)];
   if (!info) {
     box.classList.add('err');
     el.routeText.textContent = `${norm} 不在資料庫内，請手動輸入航段。`;
     return;
   }
-
+ 
   if (info.auto_fill_safe && info.routes.length === 1) {
     const r = info.routes[0];
     el.dep.value = r.dep;
@@ -6178,7 +6349,7 @@ function updateRoute(normalizeField) {
     el.routeText.textContent = `${norm}  ·  已自動帶入 ${r.route}`;
     return;
   }
-
+ 
   box.classList.add('warn');
   el.routeText.textContent = `${norm} 對應多個航段，請選擇：`;
   info.routes.forEach((r, i) => {
@@ -6201,19 +6372,21 @@ function updateRoute(normalizeField) {
     el.routeOptions.appendChild(lbl);
   });
 }
-
+ 
 // ── Build cabin string ──
 function cabinLine(type) {
+  // Standard: 商務6/豪經3/經濟10
   const hasW = el.premium.checked;
   const vals = type === 'avail'
     ? { C: cleanNum(el.availC.value), W: cleanNum(el.availW.value), Y: cleanNum(el.availY.value) }
     : { C: cleanNum(el.waitC.value), W: cleanNum(el.waitW.value), Y: cleanNum(el.waitY.value) };
-  const parts = [`C${vals.C}`];
-  if (hasW) parts.push(`W${vals.W}`);
-  parts.push(`Y${vals.Y}`);
+  const parts = [`商務${vals.C}`];
+  if (hasW) parts.push(`豪經${vals.W}`);
+  parts.push(`經濟${vals.Y}`);
   return parts.join('/');
 }
 function cabinCompact(type) {
+  // Compact: C6/W3/Y10
   const hasW = el.premium.checked;
   const vals = type === 'avail'
     ? { C: cleanNum(el.availC.value), W: cleanNum(el.availW.value), Y: cleanNum(el.availY.value) }
@@ -6223,32 +6396,35 @@ function cabinCompact(type) {
   parts.push(`Y${vals.Y}`);
   return parts.join('/');
 }
-
+ 
 // ── Generate message ──
 function generateMessage(fmt) {
   fmt = fmt || currentFormat;
   const no = normFlight(el.no.value) || 'CI0000';
   const dep = (el.dep.value||'').toUpperCase();
   const arr = (el.arr.value||'').toUpperCase();
-  const route = (dep && arr) ? `${dep}-${arr}` : 'XXX-XXX';
   let txt = '';
   if (fmt === 'compact') {
+    const route = (dep && arr) ? `${dep}-${arr}` : 'XXX-XXX';
     txt = `${fmtDate(el.date.value,true)} ${no} ${route}\n`;
-    txt += `AVL ${cabinCompact('avail')}\n`;
-    txt += `WL  ${cabinCompact('wait')}`;
+    txt += `空位 ${cabinCompact('avail')}\n`;
+    txt += `候補 ${cabinCompact('wait')}`;
   } else {
-    txt = `${fmtDate(el.date.value,false)} ${no}\n${route}\n`;
+    const depLabel = cityLabel(dep);
+    const arrLabel = cityLabel(arr);
+    const routeLabel = (dep && arr) ? `${depLabel}-${arrLabel}` : 'XXX-XXX';
+    txt = `${fmtDate(el.date.value,false)} ${no}\n${routeLabel}\n`;
     txt += `空位：${cabinLine('avail')}\n`;
     txt += `候補：${cabinLine('wait')}`;
   }
   el.output.value = txt;
   currentFormat = fmt;
 }
-
+ 
 function autoGenerate() {
   if (el.output.value.trim()) generateMessage();
 }
-
+ 
 // ── Render example ──
 function renderExample() {
   const now = new Date();
@@ -6263,7 +6439,7 @@ function renderExample() {
       `${y}/${m}/${d} CI0503 TPE-PVG\n空位：C 2 / W 1 / Y 15\n候補：C 0 / W 2 / Y 8`;
   }
 }
-
+ 
 // ── Copy ──
 function copyOutput() {
   const txt = el.output.value.trim();
@@ -6278,7 +6454,7 @@ function copyOutput() {
     document.execCommand('copy');
   });
 }
-
+ 
 // ── Clear ──
 function clearAll() {
   el.no.value = '';
@@ -6291,7 +6467,7 @@ function clearAll() {
   renderPremium();
   updateRoute(false);
 }
-
+ 
 // ── Format tabs ──
 function setFormat(fmt) {
   currentFormat = fmt;
@@ -6300,7 +6476,7 @@ function setFormat(fmt) {
   renderExample();
   if (el.output.value.trim()) generateMessage(fmt);
 }
-
+ 
 // ── Events ──
 document.getElementById('generateBtn').addEventListener('click', () => generateMessage());
 document.getElementById('copyBtn').addEventListener('click', copyOutput);
